@@ -1,0 +1,84 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #bae9ae;
+    color: #000000be;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+form {
+    background-color: hsl(224, 71%, 81%);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+div {
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select {
+    background-color: #fff;
+}
+
+form div:last-child {
+    margin-bottom: 0;
+}
