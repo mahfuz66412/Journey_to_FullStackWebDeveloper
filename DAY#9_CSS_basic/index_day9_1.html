@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css slector </title>
+    <style>
+        /* div{
+            background-color: tomato;
+        } */
+        /* class selector */
+        .red{
+            background-color: chocolate;
+        }
+        /* id selector */
+        #another{
+            background-color: aquamarine;
+        }
+
+        /* chlid selector */
+        div > p {
+            color: blue;
+            background-color: bisque;
+        }
+
+        /* child selector */
+        article > p{
+            background-color: burlywood;
+        }
+
+        /* decendent selector */
+        div p {
+            background-color: chartreuse;
+        }
+
+        /* universal selector */
+        *{
+            margin: 0;
+            padding: 0%;
+        }
+
+        /* pseodo selector */
+        a:visited{
+            color: blueviolet;
+        }
+        a:link{
+            color: chartreuse;
+        }
+        a:active{
+            background-color: rgb(148, 88, 88);
+        }
+        a:hover{
+            background-color: aqua;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- element selector. -->
+    <div class="red">
+        this is a div.
+        <p >this is a paragraph.</p>
+        <article>
+            <p>this is a article paragraph.</p>
+        </article>
+    </div>
+
+    <div id="another">
+        this is another div.
+    </div>
+
+    <div>
+        <a href="https://www.google.com"> go to google</a>
+        <a href="https://www.facebook.com">go to facebook</a>
+    </div>
+
+    <div class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus cum consequatur doloribus animi voluptatibus, sequi dolor quo temporibus culpa eligendi!
+    </div>
+</body>
+</html>
