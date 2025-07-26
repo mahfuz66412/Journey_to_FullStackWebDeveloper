@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Specificity & Cascade Example</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+
+    body {
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      color: teal;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: green;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: blue;
+      background-color: #e0f7fa;
+      padding: 10px;
+      border-left: 4px solid #0288d1;
+    }
+
+    .note {
+      font-style: italic;
+      background-color: #fbe9e7;
+      padding: 10px;
+      border-left: 4px solid #d84315;
+    }
+
+    #main-paragraph {
+      color: orange;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      border: 2px solid gray;
+      padding: 8px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+
+    input:focus {
+      border-color: dodgerblue;
+      outline: none;
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    button:hover {
+      background-color: darkgreen;
+      color: white;
+    }
+
+
+    .conflict {
+      color: purple;
+    }
+
+    #conflict {
+      color: navy;
+    }
+
+    .conflict {
+      color: crimson !important;
+    }
+
+
+    .btn {
+      padding: 10px 15px;
+      background-color: lightgray;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #submit-btn {
+      background-color: orange;
+    }
+
+    .btn-primary {
+      background-color: royalblue;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: darkblue;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Specificity & Cascade Demo</h1>
+
+  <p>This paragraph is styled using the element selector (p).</p>
+
+  <p class="highlight">This paragraph uses a class selector: .highlight (blue text, light background).</p>
+
+  <p id="main-paragraph" class="highlight">This paragraph has both ID and class. ID wins (orange text), unless overridden.</p>
+
+  <p id="conflict" class="conflict">This paragraph has both ID and class, but class uses !important — so it becomes crimson.</p>
+
+  <p style="color: black;">This uses inline style (color: black) and will override all except !important.</p>
+
+  <p class="note">This is a note box with a different class: .note</p>
+
+  <input type="text" placeholder="Focus me to change border color">
+  <input type="text" placeholder="Another input">
+
+  <p>Visit <a href="https://overapi.com/css">The CSS website</a> for more info.</p>
+
+  <button class="btn">Default Button</button>
+  <button class="btn btn-primary">Primary Button</button>
+  <button class="btn" id="submit-btn">ID Button</button>
+
+  <h2>More Examples</h2>
+
+  <p class="highlight">Another highlight paragraph to reinforce class specificity.</p>
+  <p id="main-paragraph">Repeated ID test – orange bold text will apply again.</p>
+
+  <div class="note">
+    <p>This div wraps a paragraph, still inherits class .note styling.</p>
+  </div>
+
+  <p class="conflict" id="conflict" style="color: darkorange;">This paragraph combines all styles — inline style is used but .conflict has !important (crimson wins).</p>
+
+  <footer>
+    &copy; 2025 CSS Specificity Demo. All rights reserved.
+  </footer>
+
+</body>
+</html>
